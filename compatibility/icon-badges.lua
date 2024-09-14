@@ -183,5 +183,8 @@ my_data =
 }
 
 for _,i in ipairs(my_data) do
-    Build_badge(data.raw[i.type][i.name], i.ib_data)
+    local item = data.raw[i.type][i.name]
+    if item then
+        Build_badge(item, i.ib_data)
+    end
 end
